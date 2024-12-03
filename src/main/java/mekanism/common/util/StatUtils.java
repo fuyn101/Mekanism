@@ -22,7 +22,7 @@ public class StatUtils {
         //     p += STIRLING_COEFF / Math.sqrt(m) * Math.pow(stirlingValue / m, m);
         // }
         // return m;
-        return mean
+        return mean;
     }
 
     public static double min(double... vals) {
