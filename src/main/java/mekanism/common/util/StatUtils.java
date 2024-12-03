@@ -12,16 +12,17 @@ public class StatUtils {
 
     //TODO: Re-evaluate the need for this
     public static int inversePoisson(double mean) {
-        double r = rand.nextDouble() * Math.exp(mean);
-        int m = 0;
-        double p = 1;
-        double stirlingValue = mean * Math.E;
-        double mBound = 3 * Math.ceil(mean);
-        while ((p < r) && (m < mBound)) {
-            m++;
-            p += STIRLING_COEFF / Math.sqrt(m) * Math.pow(stirlingValue / m, m);
-        }
-        return m;
+        // double r = rand.nextDouble() * Math.exp(mean);
+        // int m = 0;
+        // double p = 1;
+        // double stirlingValue = mean * Math.E;
+        // double mBound = 3 * Math.ceil(mean);
+        // while ((p < r) && (m < mBound)) {
+        //     m++;
+        //     p += STIRLING_COEFF / Math.sqrt(m) * Math.pow(stirlingValue / m, m);
+        // }
+        // return m;
+        return mean
     }
 
     public static double min(double... vals) {
