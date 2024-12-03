@@ -339,7 +339,7 @@ public final class MekanismUtils {
     public static double getGasPerTickMeanMultiplier(IUpgradeTile tile) {
         if (tile.supportsUpgrades()) {
             if (tile.supportsUpgrade(Upgrade.CHEMICAL)) {
-                return Math.pow(MekanismConfig.general.maxUpgradeMultiplier.get(),  - fractionUpgrades(tile, Upgrade.CHEMICAL));
+                return (Math.pow(MekanismConfig.general.maxUpgradeMultiplier.get(), 2 * fractionUpgrades(tile, Upgrade.SPEED) - fractionUpgrades(tile, Upgrade.CHEMICAL)))/2;
             }
             return Math.pow(MekanismConfig.general.maxUpgradeMultiplier.get(), fractionUpgrades(tile, Upgrade.SPEED));
         }
